@@ -16,7 +16,7 @@ data "aws_ami" "amazon-linux-2" {
   }
 }
 
-resource "aws_instance" "jenkins-instance" {
+resource "aws_instance" "jenkins-instance-v1.0" {
   ami             = "${data.aws_ami.amazon-linux-2.id}"
   instance_type   = "t2.medium"
   key_name        = "${var.keyname}"
